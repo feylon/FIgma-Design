@@ -1,0 +1,202 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: 'SF Pro Display', sans-serif
+
+.container
+    width: 100%
+    max-width: 1540px
+    margin: 0 auto
+    padding: 0 20px
+
+.hidden
+    display: none
+
+.block
+    display: block
+
+.d-inline-block
+    display: inline-block
+
+.flex
+    display: flex
+
+.flex-col
+    flex-direction: column
+
+.grid
+    display: grid
+
+.items-center
+    align-items: center
+
+.justify-center
+    justify-content: center
+
+.justify-end
+    justify-content: end
+
+.justify-around
+    justify-content: space-around
+
+.justify-between
+    justify-content: space-between
+
+.w-full
+    width: 100%
+
+.h-full
+    height: 100%
+
+.absulate
+    position: absolute
+
+.gap-2
+    gap: 0.5rem
+
+.gap-4
+    gap: 1rem
+
+.gap-6
+    gap: 1.5rem
+
+.mt-2
+    margin-top: 0.5rem
+
+.text-white
+    color: white
+
+.text-center
+    text-align: center
+
+.text-right
+    text-align: right
+
+.text-left
+    text-align: left
+
+.text-justify
+    text-align: justify
+
+.text-uppercase
+    text-transform: uppercase
+
+.text-lowercase
+    text-transform: lowercase
+
+.text-capitalize
+    text-transform: capitalize
+
+.font-thin
+    font-weight: 100
+
+.font-light
+    font-weight: 300
+
+.font-normal
+    font-weight: 400
+
+.font-medium, .font-weight-500
+    font-weight: 500
+
+.font-semibold, .font-weight-600
+    font-weight: 600
+
+.font-bold, .font-weight-700
+    font-weight: 700
+
+.font-black
+    font-weight: 900
+
+.italic
+    font-style: italic
+
+.underline
+    text-decoration: underline
+
+.line-through
+    text-decoration: line-through
+
+.no-underline
+    text-decoration: none
+
+.text-nowrap
+    white-space: nowrap
+
+.text-truncate
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+.border-none
+    border: none
+
+.background-none
+    background: none
+
+.select-none
+    user-select: none
+
+.cursor-pointer
+    cursor: pointer
+
+@for $i from 1 through 1000
+    .rounded-#{$i}
+        border-radius: #{$i}px
+    .w-#{$i}
+        width: #{$i}px
+    .h-#{$i}
+        height: #{$i}px
+    .mt-#{$i}
+        margin-top: #{$i}px
+    .ms-#{$i}
+        margin-left: #{$i}px
+    .mb-#{$i}
+        margin-bottom: #{$i}px
+    .ml-#{$i}
+        margin-left: #{$i}px
+    .mr-#{$i}
+        margin-right: #{$i}px
+    .pt-#{$i}
+        padding-top: #{$i}px
+    .pb-#{$i}
+        padding-bottom: #{$i}px
+    .pl-#{$i}
+        padding-left: #{$i}px
+    .pr-#{$i}
+        padding-right: #{$i}px
+    .top-#{$i}
+        top: #{$i}px
+    .bottom-#{$i}
+        bottom: #{$i}px
+    .left-#{$i}
+        left: #{$i}px
+    .right-#{$i}
+        right: #{$i}px
+    .text-#{$i}
+        font-size: #{$i}px
+    .br-#{$i}
+        border-radius: #{$i}px
+    .gap-#{$i}
+        gap: #{$i}px
+
+.bg-white
+    background: white
+
+.button_blue_news
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 24px
+
+    .barcha_yangilliklarni_kurish
+        background: #3861A7
+        color: white
+        width: 259px
+        height: 50px
+        border: none
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 10px
