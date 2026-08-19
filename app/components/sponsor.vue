@@ -34,32 +34,39 @@
     </div>
 </template>
 <script lang="ts" setup>
-const partners = ref<{ image: string, alt: string }[]>([
+import jurnalTvImg from '@/assets/img/sponsors/jurnal-tv.png'
+import jurnalImg from '@/assets/img/sponsors/jurnal.png'
+import digitalJournalImg from '@/assets/img/sponsors/digital-journal.png'
+import jurnalIlmiahImg from '@/assets/img/sponsors/jurnal-ilmiah.png'
+import journalStoriesImg from '@/assets/img/sponsors/journal-stories.png'
+import rumahJurnalImg from '@/assets/img/sponsors/rumah-jurnal.png'
+
+const partners = ref<{ image: string; alt: string }[]>([
     {
-        image: '/jurnal-tv.png',
+        image: jurnalTvImg,
         alt: 'Jurnal TV 7',
     },
     {
-        image: '/jurnal.png',
+        image: jurnalImg,
         alt: 'Jurnal by Mekari',
     },
     {
-        image: '/digital-journal.png',
+        image: digitalJournalImg,
         alt: 'Digital Journal',
     },
     {
-        image: '/jurnal-ilmiah.png',
+        image: jurnalIlmiahImg,
         alt: 'Jurnal Ilmiah',
     },
     {
-        image: '/journal-stories.png',
+        image: journalStoriesImg,
         alt: 'Journal Stories',
     },
     {
-        image: '/rumah-jurnal.png',
+        image: rumahJurnalImg,
         alt: 'Rumah Jurnal UIN Bukittinggi',
     },
-]);
+])
 
 
 
@@ -93,7 +100,7 @@ const partners = ref<{ image: string, alt: string }[]>([
 
 .images_sponser
     margin-top: 6px
-    max-width: 230px
+    // max-width: 230px
     padding: 12px
     border: #E5E7EB 1px solid
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) 
@@ -102,6 +109,10 @@ const partners = ref<{ image: string, alt: string }[]>([
     display: flex
     justify-content: center
     align-items: center
+    @media(max-width : 600px)
+        margin-left: auto
+        margin-right: auto
+        max-width: 300px
    
 
     img

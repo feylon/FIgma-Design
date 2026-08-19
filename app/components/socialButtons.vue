@@ -20,35 +20,40 @@ onUnmounted(() => {
   ctx?.revert()
 })
 
-
+import instagramIcon from "@/assets/icons/main/instagram.svg"
+import telegramIcon from "@/assets/icons/main/telegram.svg"
+import facebookIcon from "@/assets/icons/main/facebook.svg"
+import youtubeIcon from "@/assets/icons/main/youtube.svg"
+import xIcon from "@/assets/icons/main/x.svg"
 
 const socialItems = [
   {
     name: 'Instagram',
-    icon: '/icons/main/instagram.svg',
+    icon: instagramIcon,
     alt: 'instagram.svg'
   },
   {
     name: 'Telegram',
-    icon: '/icons/main/telegram.svg',
+    icon: telegramIcon,
     alt: 'telegram.svg'
   },
   {
     name: 'Facebook',
-    icon: '/icons/main/facebook.svg',
+    icon: facebookIcon,
     alt: 'facebook.svg'
   },
   {
     name: 'YouTube',
-    icon: '/icons/main/youtube.svg',
+    icon: youtubeIcon,
     alt: 'youtube.svg'
   },
   {
     name: 'X',
-    icon: '/icons/main/x.svg',
+    icon: xIcon,
     alt: 'x.svg'
   }
-];
+]
+
 
 onMounted(()=>{
   console.log(icons_List.value);
@@ -86,9 +91,9 @@ onMounted(()=>{
     flex-direction: column
     gap: 6px
     position: fixed
-    left: 0
+    left: -44px
     z-index: 600
-    top: 30%
+    top: 190px
     
 
 .scoial_icon

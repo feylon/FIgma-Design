@@ -7,11 +7,11 @@
             <div class="flex gap-24 items-center">
                 <div class="book_card">
                     <div class="icon_section">
-                        <img src="/icons/main/book.svg" alt="">
+                        <img src="@/assets/icons/main/book.svg" alt="">
                     </div>
 
                     <div class="book_picture_section">
-                        <img src="/images/book.png" alt="">
+                        <img src="@/assets/img/logo/index/book.png" alt="">
                     </div>
 
                 </div>
@@ -22,7 +22,7 @@
 
             <div class="button_about_Journal_section">
                 <div class="button_about_Journal">
-                    <img src="/icons/main/downloadIcon.svg" alt="">
+                    <img src="@/assets/icons/main/downloadIcon.svg" alt="">
                     <span>Jurnalni yuklab oling</span>
                 </div>
             </div>
@@ -42,7 +42,7 @@
 
                 <div class="card_list_news">
                     <div v-for="value in 5" class="news_card">
-                        <img class="news_card_img" src="/images/image.png" alt="">
+                        <img class="news_card_img" src="@/assets/img/logo/index/card_news.png" alt="">
 
                         <div class="card_description">
                             <span class="contenr_card">
@@ -52,12 +52,12 @@
 
                             <div class="card_details">
                                 <div class="time ">
-                                    <img src="/icons/main/calendar.svg" alt="">
+                                    <img src="@/assets/icons/main/calendar.svg" alt="">
                                     <span>18-ноябрь, 2025</span>
                                 </div>
 
                                 <div class="views">
-                                    <img src="/icons/main/eye.svg" alt="eye.svg">
+                                    <img src="@/assets/icons/main/eye.svg" alt="eye.svg">
                                     238
                                 </div>
                             </div>
@@ -87,20 +87,24 @@
 <style scoped lang="sass">
 .lastNews
 
-.about_Journal
-    margin-bottom: 120px
+.about_Journal 
+    margin-bottom: 120px;
     max-width: 1500px;
     height: 309px;
-    display: flex
-    align-items: center
+    display: flex;
+    align-items: center;
     top: 1639px;
     left: 210px;
     border-radius: 14px;
-    angle: 0 deg;
     opacity: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),    url('/background.png');
-    background-position: center
-    padding: 20px 23.5px 20px 20px
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('~/assets/img/logo/index/background.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    
+    padding: 20px 23.5px 20px 20px;
+
     @media (max-width:990px)  
         display: flex
         flex-direction: column
@@ -213,8 +217,8 @@
             grid-template-columns: repeat(2, 1fr)    
         @media (max-width:768px)
             grid-template-columns: repeat(2, 1fr)
-        @media (max-width:576px)
-            display: flex
+        @media (max-width:630px)
+            grid-template-columns: repeat(1, 1fr)
             flex-direction: column
             align-items: center
         .news_card

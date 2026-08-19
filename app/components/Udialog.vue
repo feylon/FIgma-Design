@@ -1,6 +1,6 @@
 <template>
   <button class="floating-chat-btn" @click="()=>{}" aria-label="Chatni ochish">
-    <img src="/icons/dialog.svg" alt="Chat icon" class="chat-icon" />
+    <img src="@/assets/icons/chat/dialog.svg" alt="Chat icon" class="chat-icon" />
   </button>
 </template>
 

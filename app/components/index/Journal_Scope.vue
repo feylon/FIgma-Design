@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white pt-120">
+    <div class="bg-white">
 
 
         <div class="container">
@@ -24,7 +24,7 @@
                         <div class="flex justify-between">
 
                             <div class="icon_card">
-                                <img src="/icons/main/graf.svg" alt="">
+                                <img src="@/assets/icons/main/graf.svg" alt="">
                             </div>
 
 
@@ -139,6 +139,9 @@
                 background: #FFFFFF33;
 
             .count_content
+                display: flex
+                align-items: center
+                justify-content: center
                 width: 97.5625px;
                 height: 28px
                 background: #FFFFFF33

@@ -59,27 +59,27 @@ onMounted(() => {
       clickable: true,
     }"       :init="false">
                 <swiper-slide>
-                    <img src="/doi.png" alt="BASE">
+                    <img src="@/assets/img/logo/index/doi.png" alt="BASE">
                 </swiper-slide>
 
                 <swiper-slide>
-                    <img src="/doi.png" alt="DOI">
+                    <img src="@/assets/img/logo/index/doi.png" alt="DOI">
                 </swiper-slide>
 
                 <swiper-slide>
-                    <img src="/google-scholar.png" alt="Google Scholar">
+                    <img src="@/assets/img/logo/index/google-scholar.png" alt="Google Scholar">
                 </swiper-slide>
 
                 <swiper-slide>
-                    <img src="/inlibrary.png" alt="inLibrary">
+                    <img src="@/assets/img/logo/index/inlibrary.png" alt="inLibrary">
                 </swiper-slide>
 
                 <swiper-slide>
-                    <img src="/google-scholar.png" alt="Google Scholar">
+                    <img src="@/assets/img/logo/index/google-scholar.png" alt="Google Scholar">
                 </swiper-slide>
 
                 <swiper-slide>
-                    <img src="/inlibrary.png" alt="inLibrary">
+                    <img src="@/assets/img/logo/index/inlibrary.png" alt="inLibrary">
                 </swiper-slide>
 
             </swiper-container>

@@ -49,7 +49,7 @@
                     </div>
 
                     <span class="author_item">
-                        <img src="/icons/main/user.svg" alt="">
+                        <img src="@/assets/icons/main/user.svg" alt="">
                         А.Н. Қодиров, М.С. Усмонова
                     </span>
 
@@ -60,19 +60,19 @@
                     <div class="author_U">
                         <div class="author_info">
                           <span class="article_time">
-                            <img src="/icons/main/calendar_white.svg" alt="calendar_white">
+                            <img src="@/assets/icons/main/calendar_white.svg" alt="calendar_white">
                             <span>
                               21 Ноябрь 2025
                             </span>
                           </span>
 
                             <span class="author_item">
-                                <img src="/icons/main/eye2.svg" alt="">
+                                <img src="@/assets/icons/main/eye2.svg" alt="">
                                 876
                             </span>
 
                             <span class="author_item">
-                                <img src="/icons/main/download.svg" alt="">
+                                <img src="@/assets/icons/main/download.svg" alt="">
                                 298
                             </span>
 

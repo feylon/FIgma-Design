@@ -1,12 +1,12 @@
 <template>
     <div class="section">
         <div class="container">
+            <span class="main_title text-white">
+                Тошкент Халқаро Университети Илмий онлайн журнали
+            </span>
             <div class="main_section">
-                <span class="main_title text-white">
-                    Тошкент Халқаро Университети Илмий онлайн журнали
-                </span>
 
-                <span class="text-white text-center block mt-29 main_title_sibling">
+                <span class="text-center block mt-29 main_title_sibling">
                     Замонавий тадқиқотлар ва инновацион ғояларингизни дунёга етказинг
                 </span>
 
@@ -32,7 +32,7 @@
 
                     <div class="flex justify-center">
                         <button class="whiteButton">
-                            <img src="/icons/main/message.svg" alt="/icons/main/message.svg">
+                            <img src="@/assets/icons/main/message.svg" alt="app/assets/icons/main/message.svg">
                             <span>
                                 Янги сонга мақола юбориш
                             </span>
@@ -80,7 +80,8 @@
     flex-direction: column;
     justify-content: center
     align-items: center
-    padding: 75px 231px
+    padding: 0 231px
+    padding-bottom: 75px
     @media (max-width:768px) 
         padding: 15px 0px
        
@@ -95,8 +96,9 @@
     letter-spacing: 0px;
     font-family: 'SF Pro Display', sans-serif  
     display: block  
+    padding-top: 75px
 
-main_title_sibling
+.main_title_sibling
     font-family: Arial
     font-weight: 400
     font-style: normal
@@ -105,6 +107,7 @@ main_title_sibling
     line-height: 28px
     letter-spacing: 0px
     text-align: center
+    color: #DBEAFE  
 
 
 .card_glass

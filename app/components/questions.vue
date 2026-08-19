@@ -15,12 +15,13 @@
                             <label for="fullName" class="label">ФИШ:</label>
                             <input type="text" id="fullName" name="fullName" placeholder="Киритинг">
                         </div>
-
                         <div class="grid_Input_section" style="">
                             <div class="input_Section">
                                 <label for="phone" class="label">Телефон рақам:</label>
+                                <ClientOnly> 
                                 <input v-maska data-maska="+998 ## ### ## ##" data-maska-eager
                                     placeholder="+998 -- --- -- --" type="tel" id="phone" name="phone" />
+                                </ClientOnly>
                             </div>
 
                             <div class="input_Section">
@@ -40,7 +41,7 @@
 
                         <label for="file" class="w-full file_section">
 
-                            <img src="/icons/main/folder.svg" alt="">
+                            <img src="@/assets/icons/main/folder.svg" alt="">
                             <span>Faylni biriktirish</span>
                             <input @change="changeInputSection" type="file" id="file" name="" aria-hidden="true"
                                 style="display: none;">
@@ -51,7 +52,7 @@
                             </UButton>
                         </div>
                     </form>
-
+                    <ClientOnly>
                     <form class="poll-card">
                         <span class="title">
                             Сўровномалар
@@ -96,7 +97,7 @@
                         <div class="option-card text-center active_link_option_card all_question">
                             Барча сўровномаларни кўриш
                         </div>
-                    </form>
+                    </form></ClientOnly>
                 </div>
 
             </div>
@@ -224,14 +225,23 @@ const changeInputSection = (event: Event) => {
       outline: none
             
 .file_section
-  border: 1px dashed #6A7282
-  height: 52px
-  display: flex
-  align-items: center
-  gap: 10px
-  padding-left: 10px
-  cursor: pointer
-  margin-top: 10px
+    border: 1px dashed #6A7282
+    height: 52px
+    display: flex
+    align-items: center
+    gap: 10px
+    padding-left: 10px
+    cursor: pointer
+    width: 944;
+    height: 52;
+    angle: 0 deg;
+    opacity: 1;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: dashed;
+    dashes: 6, 4;
+
+    margin-top: 10px
 
 label
   font-size: 18px

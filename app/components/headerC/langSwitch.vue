@@ -2,11 +2,11 @@
 <template>
     <div class="w-110 w-20 langSwitch">
    <div class="flex items-center">
-     <img class="w-20 w-20 flag" src="/flag.png" alt="">
+     <img class="w-20 w-20 flag" src="@/assets/img/logo/headers/flag.png" alt="">
      <span class="content">
         Ўзбекча
      </span>
-     <img src="/icons/headers/up_lang.svg" alt="">
+     <img src="@/assets/icons/headers/up_lang.svg" alt="">
 
      <img src="" alt="">
    </div>

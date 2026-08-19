@@ -30,7 +30,7 @@
 
                             <div class="items-grid-list">
                                 <div class="itemsString" v-for="(i, j) in listItems" :key="j">
-                                    <img src="/icons/checkbox.svg" alt="">
+                                    <img src="@/assets/icons/articleguidelines/checkbox.svg" alt="">
                                     <span class="block">{{ i }}</span>
                                 </div>
                             </div>
@@ -71,17 +71,12 @@ const listItems = [
   min-height: 100vh
   // padding: 30px 0    
 
-.container
-  width: 100%
-  max-width: 1440px
-  margin: 0 auto
-  padding: 0 20px
-  box-sizing: border-box
 
 .content-layout
   display: grid
-  grid-template-columns: 1fr 320px
-  gap: 24px
+  // grid-template-columns: 1fr 320px
+  grid-template-columns: 4fr 1fr;
+  gap: 20px
   align-items: start
   width: 100%
   box-sizing: border-box

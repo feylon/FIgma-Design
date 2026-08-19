@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     "~/assets/sass/fonts.sass"
   ],    
 
-  ssr: false,
   vite: {
     css: {
       preprocessorOptions: {

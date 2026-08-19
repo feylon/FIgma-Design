@@ -4,7 +4,7 @@
         <div class="container flex items-center justify-between ">
             <div class="flex gap-24">
                 <div class="flex items-center gap-6">
-                    <img src="/icons/headers/envelope.svg" alt="1">
+                    <img src="@/assets/icons/headers/envelope.svg" alt="1">
                     <NuxtLink to="mailto:info@tiuglobal.uz" class="mail_section mail">
                         info@tiuglobal.uz
                     </NuxtLink>
@@ -13,7 +13,7 @@
 
 
                 <div class="flex items-center gap-6">
-                    <img src="/icons/headers/phone-flip.svg" alt="1">
+                    <img src="@/assets/icons/headers/phone-flip.svg" alt="1">
                     <NuxtLink to="tel:+998901234567" class="mail_section phone">
                         +998 71 244-44-44
                     </NuxtLink>
@@ -27,13 +27,13 @@
     <div class="container sticky_header">
         <div class="headerB  flex items-center justify-between">
             <NuxtLink to="/">
-                <img src="/layer1000.png" alt="logo.png" class="logo-img">
+                <img src="@/assets/img/logo/layer1000.png" alt="logo.png" class="logo-img">
             </NuxtLink>
 
             <div class="flex gap-6 menu items-center select-none cursor-pointer desktop-menu">
                 <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
                     <span class="flex item-center menu_items" @mouseenter="activedropdown = 'jurnal'">
-                        Jurnal haqida <img src="/icons/headers/Arrow-up.svg" alt=""
+                        Jurnal haqida <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
                             :class="{ 'rotate-arrow': activedropdown === 'jurnal' }">
                     </span>
                     <div class="dropdown-menu" v-show="activedropdown === 'jurnal'">
@@ -46,7 +46,7 @@
 
                 <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
                     <span class="flex item-center menu_items" @mouseenter="activedropdown = 'mualliflar'">
-                        Mualliflar uchun <img src="/icons/headers/Arrow-up.svg" alt=""
+                        Mualliflar uchun <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
                             :class="{ 'rotate-arrow': activedropdown === 'mualliflar' }">
                     </span>
                     <div class="dropdown-menu" v-show="activedropdown === 'mualliflar'">
@@ -55,7 +55,7 @@
 
                 <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
                     <span class="flex item-center menu_items" @mouseenter="activedropdown = 'resentzentlar'">
-                        Resentzentlar uchun <img src="/icons/headers/Arrow-up.svg" alt=""
+                        Resentzentlar uchun <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
                             :class="{ 'rotate-arrow': activedropdown === 'resentzentlar' }">
                     </span>
                     <div class="dropdown-menu" v-show="activedropdown === 'resentzentlar'">
@@ -67,17 +67,17 @@
 
             <div class="flex items-center cursor-pointer header-actions">
                 <button class="border-none background-none search-btn">
-                    <img src="/icons/headers/search.svg" alt="search.svg">
+                    <img src="@/assets/icons/headers/search.svg" alt="search.svg">
                 </button>
 
                 <button
                     class="maqola_yuborish_Button flex items-center justify-center gap-8 border-none font-weight-600">
-                    <img src="/icons/headers/send.svg" alt="plus.svg" />
+                    <img src="@/assets/icons/headers/send.svg" alt="plus.svg" />
                     <span>Мақола юбориш</span>
                 </button>
 
                 <button class="contact_Button border-none cursor-pointer">
-                    <img src="/icons/headers/contact.svg" alt="contact.svg">
+                    <img src="@/assets/icons/headers/contact.svg" alt="contact.svg">
                 </button>
 
                 <button class="burger-btn border-none background-none"
@@ -96,7 +96,7 @@
                 <div class="mobile-menu-toggle flex justify-between items-center"
                     @click="mobileDropdownJurnal = !mobileDropdownJurnal">
                     <span class="menu_items">Jurnal haqida</span>
-                    <img src="/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownJurnal }" alt="">
+                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownJurnal }" alt="">
                 </div>
                 <div class="mobile-submenu" v-show="mobileDropdownJurnal">
                     <NuxtLink to="/ArticleGuidelines" class="dropdown-item" @click="is_Mobile_Menu_Open = false">
@@ -112,7 +112,7 @@
                 <div class="mobile-menu-toggle flex justify-between items-center"
                     @click="mobileDropdownMuallif = !mobileDropdownMuallif">
                     <span class="menu_items">Mualliflar uchun</span>
-                    <img src="/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownMuallif }" alt="">
+                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownMuallif }" alt="">
                 </div>
                 <div class="mobile-submenu" v-show="mobileDropdownMuallif">
                 </div>
@@ -122,7 +122,7 @@
                 <div class="mobile-menu-toggle flex justify-between items-center"
                     @click="mobileDropdownResentzent = !mobileDropdownResentzent">
                     <span class="menu_items">Resentzentlar uchun</span>
-                    <img src="/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownResentzent }" alt="">
+                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownResentzent }" alt="">
                 </div>
                 <div class="mobile-submenu" v-show="mobileDropdownResentzent">
                 </div>

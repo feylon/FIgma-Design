@@ -15,25 +15,25 @@
                 <span class="Main_Title_footer">Kontakt ma'lumotlari</span>
 
                 <span class="Text_footer contact_item">
-                    <img src="/icons/footer/location.svg" alt="location">
+                    <img src="@/assets/icons/footer/location.svg" alt="location">
                     <span>Тошкент шаҳри, Абдулла Қодирий кўчаси, 11</span>
                 </span>
 
                 <span class="Text_footer contact_item">
-                    <img src="/icons/footer/phone.svg" alt="phone">
+                    <img src="@/assets/icons/footer/phone.svg" alt="phone">
                     <span>+998 71 234 56 78</span>
                 </span>
 
                 <span class="Text_footer contact_item">
-                    <img src="/icons/footer/message.svg" alt="message">
+                    <img src="@/assets/icons/footer/message.svg" alt="message">
                     <span>info@tiuglobal.uz</span>
                 </span>
 
                 <div class="social_items">
-                    <img class="social_item_footer" src="/icons/footer/facebook.svg" alt="facebook">
-                    <img class="social_item_footer" src="/icons/footer/twitter.svg" alt="twitter">
-                    <img class="social_item_footer" src="/icons/footer/in.svg" alt="linkedin">
-                    <img class="social_item_footer" src="/icons/footer/youtube.svg" alt="youtube">
+                    <img class="social_item_footer" src="@/assets/icons/footer/facebook.svg" alt="facebook">
+                    <img class="social_item_footer" src="@/assets/icons/footer/twitter.svg" alt="twitter">
+                    <img class="social_item_footer" src="@/assets/icons/footer/in.svg" alt="linkedin">
+                    <img class="social_item_footer" src="@/assets/icons/footer/youtube.svg" alt="youtube">
                 </div>
             </div>
         </div>
@@ -104,10 +104,9 @@
     width: 20px
     height: 20px
     margin-top: 2px
-
+ 
 .social_items
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
+    display: flex
     justify-content: start
     align-items: center
     gap: 8px

@@ -8,7 +8,7 @@
                     <div class="info-cards-grid">
                         <div class="info-card">
                             <div class="card-icon-box">
-                                <img src="/icons/questions/envelope.svg" alt="envelope" />
+                                <img src="@/assets/icons/questions/envelope.svg" alt="envelope" />
                             </div>
                             <span class="card-label">Электрон манзил:</span>
                             <span class="card-value">info@tiuglobal.uz</span>
@@ -16,7 +16,7 @@
 
                         <div class="info-card">
                             <div class="card-icon-box">
-                                <img src="/icons/questions/phone-flip.svg" alt="phone" />
+                                <img src="@/assets/icons/questions/phone-flip.svg" alt="phone" />
                             </div>
                             <span class="card-label">Телефон рақам:</span>
                             <span class="card-value">+998 71 244-44-44</span>
@@ -24,7 +24,7 @@
 
                         <div class="info-card">
                             <div class="card-icon-box">
-                                <img src="/icons/questions/calendar.svg" alt="calendar" />
+                                <img src="@/assets/icons/questions/calendar.svg" alt="calendar" />
                             </div>
                             <span class="card-label">Иш кунлари:</span>
                             <span class="card-value">Душанба - Жума<br>09:00 - 18:00</span>
@@ -32,7 +32,7 @@
 
                         <div class="info-card">
                             <div class="card-icon-box">
-                                <img src="/icons/questions/location.svg" alt="location" />
+                                <img src="@/assets/icons/questions/location.svg" alt="location" />
                             </div>
                             <span class="card-label">Манзил:</span>
                             <span class="card-value">Юнособод тумани, Шараф Рашидов Шоҳ кўчаси</span>
@@ -40,18 +40,18 @@
 
                         <div class="info-card">
                             <div class="card-icon-box">
-                                <img src="/icons/questions/socials.svg" alt="socials" />
+                                <img src="@/assets/icons/questions/socials.svg" alt="socials" />
                             </div>
                             <span class="card-label">Ижтимоий тармоқлар:</span>
                             <div class="social-icons-row flex gap-2 mt-2">
-                                <a href="#" class="soc-icon"><img src="/icons/questions/instagram.svg"
+                                <a href="#" class="soc-icon"><img src="@/assets/icons/questions/instagram.svg"
                                         alt="instagram"></a>
-                                <a href="#" class="soc-icon"><img src="/icons/questions/telegram.svg"
+                                <a href="#" class="soc-icon"><img src="@/assets/icons/questions/telegram.svg"
                                         alt="telegram"></a>
-                                <a href="#" class="soc-icon"><img src="/icons/questions/facebook.svg"
+                                <a href="#" class="soc-icon"><img src="@/assets/icons/questions/facebook.svg"
                                         alt="facebook"></a>
-                                <a href="#" class="soc-icon"><img src="/icons/questions/youtube.svg" alt="youtube"></a>
-                                <a href="#" class="soc-icon"><img src="/icons/questions/x.svg" alt="x"></a>
+                                <a href="#" class="soc-icon"><img src="@/assets/icons/questions/youtube.svg" alt="youtube"></a>
+                                <a href="#" class="soc-icon"><img src="@/assets/icons/questions/x.svg" alt="x"></a>
                             </div>
                         </div>
                     </div>
@@ -67,18 +67,20 @@
                                     <label>ФИШ:</label>
                                     <input type="text" placeholder="Киритинг" v-model="formData.name" />
                                 </div>
-
-                                <div class="form-row flex gap-4">
-                                    <div class="input-group w-full">
-                                        <label>Телефон рақам:</label>
-                                        <input type="text" v-maska data-maska="+998 ## ### ## ##" data-maska-eager
-                                            placeholder="+998 -- --- -- --" v-model="formData.phone" />
+                                <ClientOnly>
+                                    <div class="form-row flex gap-4">
+                                        <div class="input-group w-full">
+                                            <label>Телефон рақам:</label>
+                                            <input type="text" v-maska data-maska="+998 ## ### ## ##" data-maska-eager
+                                                placeholder="+998 -- --- -- --" v-model="formData.phone" />
+                                        </div>
+                                        <div class="input-group w-full">
+                                            <label>Электрон манзил:</label>
+                                            <input type="email" placeholder="example@email.com"
+                                                v-model="formData.email" />
+                                        </div>
                                     </div>
-                                    <div class="input-group w-full">
-                                        <label>Электрон манзил:</label>
-                                        <input type="email" placeholder="example@email.com" v-model="formData.email" />
-                                    </div>
-                                </div>
+                                </ClientOnly>
 
                                 <div class="input-group">
                                     <label>Матн:</label>
@@ -138,7 +140,7 @@ const formData = reactive({
     width: 100%
     height: 300px
     // background: url('/Investmentincommercialproperty-2.webp') center/cover no-repeat
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/background.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('~/assets/img/logo/index/background.png');
     background-position: center
     background-repeat: no-repeat
     background-size: cover
@@ -171,7 +173,7 @@ const formData = reactive({
     line-height: 50px
 
 .contact-container
-    margin: -50px auto 0 auto
+    margin: -30px auto 0 auto
     padding: 0 0px
     position: relative
     z-index: 10
@@ -211,7 +213,7 @@ const formData = reactive({
 
 .card-label
     font-size: 18px
-    color: #6C757D
+    color: #6B7889
 
 .card-value
     font-size: 20px
@@ -224,17 +226,17 @@ const formData = reactive({
     flex-wrap: wrap
 
 .soc-icon
-    width: 36px
-    height: 36px
-    background: #E5EFF9
+    width: 40px
+    height: 40px
+    background: #F3F4F6
     border-radius: 8px
     display: flex
     align-items: center
     justify-content: center
     transition: background 0.2s
     img
-        width: 18px
-        height: 18px
+        width: 24px
+        height: 24px
     &:hover
         background: variables.$blueBackground
         img

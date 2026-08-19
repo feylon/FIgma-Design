@@ -16,6 +16,11 @@
 
 <script lang="ts" setup>
 import { Value } from 'sass';
+import member1 from "@/assets/img/editorial_team/member1.jpg"
+import member2 from "@/assets/img/editorial_team/member2.jpg"
+
+import member3 from "@/assets/img/editorial_team/member3.jpg"
+import member4 from "@/assets/img/editorial_team/member4.jpg"
 
 
 const members = ref<{
@@ -26,22 +31,22 @@ const members = ref<{
     {
         name: 'Yuldashev Iskandar Baxramovich',
         position: 'Директор',
-        image: '/images/member1.jpg'
+        image: member1
     },
     {
         name: 'Bekmuradov Adxam Sharipovich',
         position: 'Ректор маслаҳатчиси',
-        image: '/images/member2.jpg'
+        image: member2
     },
     {
         name: 'Xannayev Sherzod Qurbonnazarovich',
         position: 'Илмий ишлар ва халқаро алоқалар бўйича проректор',
-        image: '/images/member3.jpg'
+        image: member3
     },
     {
         name: 'Raxmonov Dilshodjon Alidjonovich',
         position: 'Илмий тадқиқотлар ва инновациялар департаменти бошлиғи',
-        image: '/images/member4.jpg'
+        image: member4
     }
 ])
 
