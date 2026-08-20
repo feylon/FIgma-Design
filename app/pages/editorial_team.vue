@@ -48,7 +48,11 @@
 import firstTab from '~/components/editorial_team/first.tab.vue';
 import secondTab from '~/components/editorial_team/second.tab.vue';
 
-
+useHead(
+    {
+        title: "Таҳририят жамоаси"
+    }
+)
 const router = useRouter();
 console.log(router.currentRoute.value.fullPath)
 definePageMeta(

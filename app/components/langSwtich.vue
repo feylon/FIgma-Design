@@ -6,6 +6,21 @@ O'zbekcha
 
 <img src="/icons/headers/up_lang.svg" alt="arrow-down.svg">
 
+
+<div class="lang__items">
+
+
+    <div v-for="value in 3" class="lang_item">
+        <span>
+            O'zbek
+        </span>
+    </div>
+
+</div>
+
  </div>
 
 </template>
+
+<style lang="sass" scoped>
+</style>

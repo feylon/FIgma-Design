@@ -117,7 +117,13 @@ import { reactive } from 'vue'
 
 definePageMeta({
     layout: "main"
-})
+});
+
+useHead(
+    {
+        title : "Боғланиш"
+    }
+)
 
 const formData = reactive({
     name: '',

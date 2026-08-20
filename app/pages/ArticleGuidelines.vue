@@ -51,6 +51,9 @@ import JournalAboutCard from '@/components/JournalAboutCard.vue'
 
 definePageMeta({
     layout: "main"
+});
+useHead({
+  title: "Мақолаларга қўйиладиган талаблар"
 })
 
 const listItems = [

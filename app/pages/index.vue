@@ -15,6 +15,11 @@ import LastNews from "~/components/lastNews.vue";
 definePageMeta({
     layout: 'main'
 });
+useHead(
+    {
+        title : "Бош саҳифа"
+    }
+)
 </script>
 
 <style scoped lang="sass">
