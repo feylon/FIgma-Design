@@ -97,6 +97,9 @@
     font-family: 'SF Pro Display', sans-serif  
     display: block  
     padding-top: 75px
+    @media(max-width: 768px)
+        font-size: 40px
+
 
 .main_title_sibling
     font-family: Arial
@@ -212,6 +215,8 @@
     padding-top: 10px;
     padding-bottom: 10px
     padding-left: 16px
+    @media(max-width:768px)
+        border: none
 
     .span_title
         font-family: Arial;
@@ -232,8 +237,9 @@
 .card_lists
     display: flex
     gap: 24px
-    padding-top: 32px
-    @media(max-width:1200px)
+    padding-top: 32px   
+    
+    @media(max-width:768px)
         flex-direction: column
         margin-top: 40px 
     .card_item
@@ -247,6 +253,9 @@
         justify-content: center
         flex-direction: column
         align-items: center
+        @media(max-width:1000px)
+            width: 211px
+            height: 76px
         .main_title_card
             font-family: Arial;
             font-weight: 400;

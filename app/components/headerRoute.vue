@@ -27,7 +27,6 @@ const props = defineProps<{
     width: 100%
     height: 300px
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('~/assets/img/logo/index/background.png');
-    // background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),    url('/74a168f79f93ad78873ed771937a911bb04c3c3f.png');
     background-position: center
     background-size: cover
     background-repeat: no-repeat

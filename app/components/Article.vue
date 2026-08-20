@@ -108,8 +108,6 @@
 
 .read_button
   background: #3861A7
-  span
-    font-family: Arial;
   font-weight: 400;
   font-style: Regular;
   font-size: 14px;
@@ -126,6 +124,9 @@
   display: flex
   justify-content: center
   align-content: center
+  cursor: pointer
+  span
+    font-family: Arial;
 
 
 
@@ -139,6 +140,7 @@
   padding-left: 16px;
   angle: 0 deg;
   opacity: 1;
+  cursor: pointer
   border: 1px #3861A7 solid;
 
 .oxirgi_son

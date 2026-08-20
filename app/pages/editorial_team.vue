@@ -1,7 +1,7 @@
 <template>
     <HeaderRoute :url="['Журнал ҳақида', 'Таҳририят жамоаси']" title="Таҳририят жамоаси" />
 
-    <div class="container">
+    <div class="container mb-120    ">
 
         <div class="head_tahriyat_jamoa">
 

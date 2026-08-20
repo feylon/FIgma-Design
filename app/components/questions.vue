@@ -134,18 +134,12 @@ const changeInputSection = (event: Event) => {
 @use "../assets/sass/_variables" as variables
 @use "../assets/sass/main" as *
 
-
-
-
 .card
-    padding: 20px
-    background-color: #ffffff
-    border: solid 1px #E5E7EB
-    border-radius: 12px
-    padding: 20px
-    margin-top: 12px
-
-
+  padding: 20px
+  background-color: #ffffff
+  border: solid 1px #E5E7EB
+  border-radius: 12px
+  margin-top: 12px
 
 .wrapper 
   display: grid
@@ -166,18 +160,12 @@ const changeInputSection = (event: Event) => {
       
     .title_content
       color: #4A5565
-      font-size: 18px
+      font-family: 'SF Pro Display', sans-serif
       font-weight: 400
-      color: #4A5565
-      font-family: SF Pro Display;
-      font-weight: 400;
-      font-style: Regular;
-      font-size: 18px;
-      leading-trim: NONE;
-      line-height: 28px;
+      font-size: 18px
+      line-height: 28px
       margin-top: 8px
-      letter-spacing: 0px;
-
+      letter-spacing: 0px
 
   @media (max-width: 992px) 
     grid-template-columns: 1fr
@@ -185,19 +173,18 @@ const changeInputSection = (event: Event) => {
 .input_Section
   display: flex
   flex-direction: column
+
   label
     font-size: 18px
     color: #080E1B
     margin-top: 10px
     font-weight: 500
     display: block
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: 'SF Pro Display', sans-serif
     
   input
     display: block
-    padding: 3px
-    padding-left: 14px
-    padding-right: 14px
+    padding: 3px 14px
     border: #E5E7EB 1px solid
     background: none
     border-radius: 12px
@@ -205,9 +192,11 @@ const changeInputSection = (event: Event) => {
     width: 100%
     margin-top: 5px
     font-size: 20px
+
     &:focus
       border: #E5E7EB 1px solid
       outline: none
+
   textarea
     display: block
     border: #E5E7EB 1px solid
@@ -217,31 +206,24 @@ const changeInputSection = (event: Event) => {
     width: 100%
     margin-top: 5px
     font-size: 20px
-    padding-left: 14px
-    padding-right: 14px
-    padding-top: 15px
+    padding: 15px 14px 0 14px
+
     &:focus
       border: #E5E7EB 1px solid
       outline: none
             
 .file_section
-    border: 1px dashed #6A7282
-    height: 52px
-    display: flex
-    align-items: center
-    gap: 10px
-    padding-left: 10px
-    cursor: pointer
-    width: 944;
-    height: 52;
-    angle: 0 deg;
-    opacity: 1;
-    border-radius: 12px;
-    border-width: 1px;
-    border-style: dashed;
-    dashes: 6, 4;
-
-    margin-top: 10px
+  border: 1px dashed #6A7282
+  height: 52px
+  display: flex
+  align-items: center
+  gap: 10px
+  padding-left: 10px
+  cursor: pointer
+  width: 100%
+  opacity: 1
+  border-radius: 12px
+  margin-top: 10px
 
 label
   font-size: 18px
@@ -283,9 +265,6 @@ label
 
   &:hover 
     border-color: #b0c4de
-    
-
-
 
   .radio-input 
     appearance: none
@@ -302,7 +281,6 @@ label
     justify-content: center
     flex-shrink: 0
     transition: all 0.2s ease
-    
 
     &:checked 
       border-color: #2563eb
@@ -316,50 +294,39 @@ label
     color: #0f172a
   
 .content_c
-    font-family: SF Pro Display;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 20px;
-    leading-trim: NONE;
-    line-height: 130%;
-    letter-spacing: 0%;
-    color: #02090F
-
-
+  font-family: 'SF Pro Display', sans-serif
+  font-weight: 500
+  font-size: 20px
+  line-height: 130%
+  letter-spacing: 0%
+  color: #02090F
 
 .content_b
-    color: #333C42
-    display: block
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 18px;
-    leading-trim: NONE;
-    line-height: 130%;
-    letter-spacing: 0%;
-    margin-top: 8px
-
+  color: #333C42
+  display: block
+  font-weight: 400
+  font-size: 18px
+  line-height: 130%
+  letter-spacing: 0%
+  margin-top: 8px
 
 .option_List
-    display: flex
-    flex-direction: column
+  display: flex
+  flex-direction: column
 
 .active_link_option_card
-    color: #3861A7
-    text-align: center
-    width: 100%
-    display: flex
-    justify-content: center
-    font-weight: 500
-
-
-
+  color: #3861A7
+  text-align: center
+  width: 100%
+  display: flex
+  justify-content: center
+  font-weight: 500
 
 .grid_Input_section
-    display: grid
-    grid-template-columns: 1fr 1fr
-    gap: 10px;
-    @media(max-width:600px)
-        grid-template-columns: 1fr
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 10px
 
-
+  @media (max-width: 600px)
+    grid-template-columns: 1fr
 </style>

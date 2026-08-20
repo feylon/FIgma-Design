@@ -92,6 +92,7 @@
     line-height: 1.5
     color: white
     overflow-wrap: anywhere
+    cursor: pointer
 
 .contact_item
     display: grid

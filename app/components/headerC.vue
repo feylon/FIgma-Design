@@ -1,91 +1,95 @@
 <template>
 
-    <div class="firstNav">
-        <div class="container flex items-center justify-between ">
-            <div class="flex gap-24">
-                <div class="flex items-center gap-6">
-                    <img src="@/assets/icons/headers/envelope.svg" alt="1">
-                    <NuxtLink to="mailto:info@tiuglobal.uz" class="mail_section mail">
-                        info@tiuglobal.uz
-                    </NuxtLink>
+    <div class="sticky-wrapper bg-white">
+        <div class="firstNav">
+            <div class="container flex items-center justify-between ">
+                <div class="flex gap-24">
+                    <div class="flex items-center gap-6">
+                        <img src="@/assets/icons/headers/envelope.svg" alt="1">
+                        <NuxtLink to="mailto:info@tiuglobal.uz" class="mail_section mail">
+                            <span class="">
+                                info@tiuglobal.uz
+                            </span>
+                        </NuxtLink>
+                    </div>
+
+
+
+                    <div class="flex items-center gap-6">
+                        <img src="@/assets/icons/headers/phone-flip.svg" alt="1">
+                        <NuxtLink to="tel:+998901234567" class="mail_section phone">
+                            +998 71 244-44-44
+                        </NuxtLink>
+                    </div>
                 </div>
-
-
-
-                <div class="flex items-center gap-6">
-                    <img src="@/assets/icons/headers/phone-flip.svg" alt="1">
-                    <NuxtLink to="tel:+998901234567" class="mail_section phone">
-                        +998 71 244-44-44
-                    </NuxtLink>
+                <div>
+                    <langSwitch />
                 </div>
-            </div>
-            <div>
-                <langSwitch />
             </div>
         </div>
-    </div>
-    <div class="container sticky_header">
-        <div class="headerB  flex items-center justify-between">
-            <NuxtLink to="/">
-                <img src="@/assets/img/logo/layer1000.png" alt="logo.png" class="logo-img">
-            </NuxtLink>
+        <div class="container sticky_header">
+            <div class="headerB  flex items-center justify-between">
+                <NuxtLink to="/">
+                    <img src="@/assets/img/logo/layer1000.png" alt="logo.png" class="logo-img">
+                </NuxtLink>
 
-            <div class="flex gap-6 menu items-center select-none cursor-pointer desktop-menu">
-                <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
-                    <span class="flex item-center menu_items" @mouseenter="activedropdown = 'jurnal'">
-                        Журнал ҳақида<img src="@/assets/icons/headers/Arrow-up.svg" alt=""
-                            :class="{ 'rotate-arrow': activedropdown === 'jurnal' }">
-                    </span>
-                    <div class="dropdown-menu" v-show="activedropdown === 'jurnal'">
-                        <NuxtLink to="/ArticleGuidelines" class="dropdown-item">Maqolalarga qo'yiladigan talablar
-                        </NuxtLink>
-                        <NuxtLink to="/editorial_team" class="dropdown-item">Tahririyat jamoasi</NuxtLink>
-                        <NuxtLink to="/questions" class="dropdown-item">Maxfiylik bayonoti</NuxtLink>
+                <div class="flex gap-6 menu items-center select-none cursor-pointer desktop-menu">
+                    <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
+                        <span class="flex item-center menu_items" @mouseenter="activedropdown = 'jurnal'">
+                            Журнал ҳақида<img src="@/assets/icons/headers/Arrow-up.svg" alt=""
+                                :class="{ 'rotate-arrow': activedropdown === 'jurnal' }">
+                        </span>
+                        <div class="dropdown-menu" v-show="activedropdown === 'jurnal'">
+                            <NuxtLink to="/ArticleGuidelines" class="dropdown-item">Maqolalarga qo'yiladigan talablar
+                            </NuxtLink>
+                            <NuxtLink to="/editorial_team" class="dropdown-item">Tahririyat jamoasi</NuxtLink>
+                            <NuxtLink to="/questions" class="dropdown-item">Maxfiylik bayonoti</NuxtLink>
+                        </div>
                     </div>
+
+                    <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
+                        <span class="flex item-center menu_items" @mouseenter="activedropdown = 'mualliflar'">
+                            Муаллифлар учун <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
+                                :class="{ 'rotate-arrow': activedropdown === 'mualliflar' }">
+                        </span>
+                        <div class="dropdown-menu" v-show="activedropdown === 'mualliflar'">
+                        </div>
+                    </div>
+
+                    <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
+                        <span class="flex item-center menu_items" @mouseenter="activedropdown = 'resentzentlar'">
+                            Рецензентлар учун <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
+                                :class="{ 'rotate-arrow': activedropdown === 'resentzentlar' }">
+                        </span>
+                        <div class="dropdown-menu" v-show="activedropdown === 'resentzentlar'">
+                        </div>
+                    </div>
+
+                    <span @click="router.push('/questions')" class="flex item-center menu_items">Боғланиш </span>
                 </div>
 
-                <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
-                    <span class="flex item-center menu_items" @mouseenter="activedropdown = 'mualliflar'">
-                        Муаллифлар учун <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
-                            :class="{ 'rotate-arrow': activedropdown === 'mualliflar' }">
-                    </span>
-                    <div class="dropdown-menu" v-show="activedropdown === 'mualliflar'">
-                    </div>
+                <div class="flex items-center cursor-pointer header-actions">
+                    <button class="border-none background-none search-btn">
+                        <img src="@/assets/icons/headers/search.svg" alt="search.svg">
+                    </button>
+
+                    <button
+                        class="maqola_yuborish_Button flex items-center justify-center gap-8 border-none font-weight-600">
+                        <img src="@/assets/icons/headers/send.svg" alt="plus.svg" />
+                        <span>Мақола юбориш</span>
+                    </button>
+
+                    <button class="contact_Button border-none cursor-pointer">
+                        <img src="@/assets/icons/headers/contact.svg" alt="contact.svg">
+                    </button>
+
+                    <button class="burger-btn border-none background-none"
+                        @click="is_Mobile_Menu_Open = !is_Mobile_Menu_Open">
+                        <span :class="{ 'open': is_Mobile_Menu_Open }"></span>
+                        <span :class="{ 'open': is_Mobile_Menu_Open }"></span>
+                        <span :class="{ 'open': is_Mobile_Menu_Open }"></span>
+                    </button>
                 </div>
-
-                <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
-                    <span class="flex item-center menu_items" @mouseenter="activedropdown = 'resentzentlar'">
-                        Рецензентлар учун <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
-                            :class="{ 'rotate-arrow': activedropdown === 'resentzentlar' }">
-                    </span>
-                    <div class="dropdown-menu" v-show="activedropdown === 'resentzentlar'">
-                    </div>
-                </div>
-
-                <span @click="router.push('/questions')" class="flex item-center menu_items">Боғланиш </span>
-            </div>
-
-            <div class="flex items-center cursor-pointer header-actions">
-                <button class="border-none background-none search-btn">
-                    <img src="@/assets/icons/headers/search.svg" alt="search.svg">
-                </button>
-
-                <button
-                    class="maqola_yuborish_Button flex items-center justify-center gap-8 border-none font-weight-600">
-                    <img src="@/assets/icons/headers/send.svg" alt="plus.svg" />
-                    <span>Мақола юбориш</span>
-                </button>
-
-                <button class="contact_Button border-none cursor-pointer">
-                    <img src="@/assets/icons/headers/contact.svg" alt="contact.svg">
-                </button>
-
-                <button class="burger-btn border-none background-none"
-                    @click="is_Mobile_Menu_Open = !is_Mobile_Menu_Open">
-                    <span :class="{ 'open': is_Mobile_Menu_Open }"></span>
-                    <span :class="{ 'open': is_Mobile_Menu_Open }"></span>
-                    <span :class="{ 'open': is_Mobile_Menu_Open }"></span>
-                </button>
             </div>
         </div>
     </div>
@@ -167,7 +171,6 @@ const mobileDropdownResentzent = ref(false)
     height: 102px
     min-width: 100%
     position: sticky
-    top: 52px
     z-index: 502
     background: #ffffff
             
@@ -300,7 +303,7 @@ const mobileDropdownResentzent = ref(false)
         color: variables.$blueBackground
         border-bottom: 1px solid #eaeaea
         &:hover
-            background: #e9ecef
+            // background: #e9ecef
 .info_tiuglobal
     font-family: 'SF Pro Display', sans-serif
 @media screen and (max-width: 1200px)
@@ -356,8 +359,21 @@ const mobileDropdownResentzent = ref(false)
         text-decoration: none
 
 .sticky_header
-    position:sticky
+    // position:sticky
     top:54px
 
-@media (max-width:900px)
+
+.sticky-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: sticky
+    top: 0
+    z-index: 1000
+    width: 100%
+    margin: auto
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.mail_Name
+    @media (max-width: 786px)
+        display: none
 </style>

@@ -41,24 +41,24 @@
 
 
                     <div class="card_list_news">
-                        <div v-for="value in 5" class="news_card">
-                            <img class="news_card_img" src="@/assets/img/logo/index/card_news.png" alt="">
+                        <div v-for="value in last_News" class="news_card">
+                            <img class="news_card_img" :src="value.img" alt="">
 
                             <div class="card_description">
                                 <span class="contenr_card">
-                                    Бугун, 18-ноябрь – Ўзбекистон Республикаси Давлат байроғи қабул қилинган кун!
+                                    {{ value.title }}
 
                                 </span>
 
                                 <div class="card_details">
                                     <div class="time ">
                                         <img src="@/assets/icons/main/calendar.svg" alt="">
-                                        <span>18-ноябрь, 2025</span>
+                                        <span>{{ value.date }}</span>
                                     </div>
 
                                     <div class="views">
                                         <img src="@/assets/icons/main/eye.svg" alt="eye.svg">
-                                        238
+                                        {{ value.views }}
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,54 @@
     </div>
 </template>
 
+<script lang="ts" setup>
+import image1 from "@/assets/img/logo/index/card_news.png"
+import image2 from "@/assets/img/logo/index/card_news1.png"
+import image3 from "@/assets/img/logo/index/card_news2.png"
+import image4 from "@/assets/img/logo/index/card_news3.png"
+import image5 from "@/assets/img/logo/index/card_news4.png"
 
+
+
+const last_News: {
+    title: string,
+    date: string,
+    views: number,
+    img: any
+}[] = [
+        {
+            "title": "Бугун, 18-ноябрь – Ўзбекистон Республикасида Давлат байроғи қабул қилинган кун!",
+            "date": "18-ноябрь, 2025",
+            "views": 238,
+            img: image1
+        },
+        {
+            "title": "ТНУда \"Энг фаол илмий талаба – 2025\" университет босқичи бўлиб ўтди!",
+            "date": "8 ноябрь, 2025",
+            "views": 456,
+            img: image2
+        },
+        {
+            "title": "\"Миллий либос – миллат қиёфаси, инсон кўрки, миллий ифтихор ифодасидир!\"",
+            "date": "3 ноябрь, 2025",
+            "views": 187,
+            img: image3
+        },
+        {
+            "title": "Ташриф расмий учрашув билан бошланди.",
+            "date": "7 ноябрь, 2025",
+            "views": 67,
+            img: image4
+        },
+        {
+            "title": "ТИУ профессор-ўқитувчилари халқаро мукофот билан тақдирланди",
+            "date": "11 ноябрь, 2025",
+            "views": 123,
+            img: image5
+        }
+    ]
+
+</script>
 <style scoped lang="sass">
 .lastNews
 
