@@ -1,109 +1,105 @@
 <template>
-  <div class="container mt-120">
-    <div class="mx-auto px-4 flex flex-col gap-6 mb-50">
+  <div class="container mt-100">
+    <div class="mx-auto px-4 flex flex-col gap-6 ">
 
-        <div class="flex flex-col gap-2">
-            <span class="oxirgi_son">
-                Охирги сон мақолалари
-            </span>
+      <div class="flex flex-col gap-2">
+        <span class="oxirgi_son">
+          Охирги сон мақолалари
+        </span>
 
-            <span class="nashrVaqt">
-                Журналнинг № 12 (2024) сонида нашр этилган илмий мақолалар
-            </span>
-        </div>
+        <span class="nashrVaqt">
+          Журналнинг № 12 (2024) сонида нашр этилган илмий мақолалар
+        </span>
+      </div>
 
-        <div class="card_grid">
-            <div
-                v-for="value in 6"
-                :key="value"
-                class="card"
-            >
-                <div class="card_top">
-                    <div class="tags_U">
-                        Iqdisodiyot fanlari
-                    </div>
-
-                    <div class="pages">
-                        5 - 12 sahifa
-                    </div>
-                </div>
-
-                <div class="card_content_U">
-
-                    <div class="child1 text-30">
-                        Ўзбекистон иқтисодиётида рақамли трансформация
-                        жараёнларининг ўрни
-                    </div>
-
-                    <div class="doi text-18">
-                        DOI:
-                        <a href="https://doi.org/10.35465/ku.v16i.1254">
-                            https://doi.org/10.35465/ku.v16i.1254
-                        </a>
-                    </div>
-
-                    <div class="content_U text-22">
-                        Мақолада Ўзбекистон Республикасида рақамли иқтисодиётни
-                        ривожлантириш масалалари, рақамли технологияларнинг
-                        иқтисодий жараёнларга таъсири таҳлил қилинган...
-                    </div>
-
-                    <span class="author_item">
-                        <img src="@/assets/icons/main/user.svg" alt="">
-                        А.Н. Қодиров, М.С. Усмонова
-                    </span>
-
-
-                    <div class="line_article">
-
-                    </div>
-                    <div class="author_U">
-                        <div class="author_info">
-                          <span class="article_time">
-                            <img src="@/assets/icons/main/calendar_white.svg" alt="calendar_white">
-                            <span>
-                              21 Ноябрь 2025
-                            </span>
-                          </span>
-
-                            <span class="author_item">
-                                <img src="@/assets/icons/main/eye2.svg" alt="">
-                                876
-                            </span>
-
-                            <span class="author_item">
-                                <img src="@/assets/icons/main/download.svg" alt="">
-                                298
-                            </span>
-
-                        </div>
-
-                        <div class="card_actions">
-                            <div class="read_button">
-                                <span>
-                                 Ўқиш
-                                </span>
-                            </div>
-
-                            <div class="downloadbuttonnws">
-                               Юклаб олиш
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+      <div class="card_grid">
+        <div v-for="value in 6" :key="value" class="card">
+          <div class="card_top">
+            <div class="tags_U">
+              Iqdisodiyot fanlari
             </div>
+
+            <div class="pages">
+              5 - 12 sahifa
+            </div>
+          </div>
+
+          <div class="card_content_U">
+
+            <div class="child1 text-30">
+              Ўзбекистон иқтисодиётида рақамли трансформация
+              жараёнларининг ўрни
+            </div>
+
+            <div class="doi text-18">
+              DOI:
+              <a href="https://doi.org/10.35465/ku.v16i.1254">
+                https://doi.org/10.35465/ku.v16i.1254
+              </a>
+            </div>
+
+            <div class="content_U text-22">
+              Мақолада Ўзбекистон Республикасида рақамли иқтисодиётни
+              ривожлантириш масалалари, рақамли технологияларнинг
+              иқтисодий жараёнларга таъсири таҳлил қилинган...
+            </div>
+
+            <span class="author_item">
+              <img src="@/assets/icons/main/user.svg" alt="">
+              А.Н. Қодиров, М.С. Усмонова
+            </span>
+
+
+            <div class="line_article">
+
+            </div>
+            <div class="author_U">
+              <div class="author_info">
+                <span class="article_time">
+                  <img src="@/assets/icons/main/calendar_white.svg" alt="calendar_white">
+                  <span>
+                    21 Ноябрь 2025
+                  </span>
+                </span>
+
+                <span class="author_item">
+                  <img src="@/assets/icons/main/eye2.svg" alt="">
+                  876
+                </span>
+
+                <span class="author_item">
+                  <img src="@/assets/icons/main/download.svg" alt="">
+                  298
+                </span>
+
+              </div>
+
+              <div class="card_actions">
+                <div class="read_button">
+                  <span>
+                    Ўқиш
+                  </span>
+                </div>
+
+                <div class="downloadbuttonnws">
+                  Юклаб олиш
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="all_articles">
-        <UButton>
-            Barcha maqolalarni ko'rish
-        </UButton>
+      <UButton>
+        Barcha maqolalarni ko'rish
+      </UButton>
     </div>
 
-
-    </div>
+<!-- -->
+  </div>
 </template>
 
 <style scoped lang="sass">

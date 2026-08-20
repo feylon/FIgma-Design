@@ -10,6 +10,7 @@
 </template>
 <script lang="ts" setup>
 import Journal_Scope from "@/components/index/Journal_Scope.vue"
+import LastNews from "~/components/lastNews.vue";
 
 definePageMeta({
     layout: 'main'

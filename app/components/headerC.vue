@@ -33,7 +33,7 @@
             <div class="flex gap-6 menu items-center select-none cursor-pointer desktop-menu">
                 <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
                     <span class="flex item-center menu_items" @mouseenter="activedropdown = 'jurnal'">
-                        Jurnal haqida <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
+                        Журнал ҳақида<img src="@/assets/icons/headers/Arrow-up.svg" alt=""
                             :class="{ 'rotate-arrow': activedropdown === 'jurnal' }">
                     </span>
                     <div class="dropdown-menu" v-show="activedropdown === 'jurnal'">
@@ -46,7 +46,7 @@
 
                 <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
                     <span class="flex item-center menu_items" @mouseenter="activedropdown = 'mualliflar'">
-                        Mualliflar uchun <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
+                        Муаллифлар учун <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
                             :class="{ 'rotate-arrow': activedropdown === 'mualliflar' }">
                     </span>
                     <div class="dropdown-menu" v-show="activedropdown === 'mualliflar'">
@@ -55,14 +55,14 @@
 
                 <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
                     <span class="flex item-center menu_items" @mouseenter="activedropdown = 'resentzentlar'">
-                        Resentzentlar uchun <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
+                        Рецензентлар учун <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
                             :class="{ 'rotate-arrow': activedropdown === 'resentzentlar' }">
                     </span>
                     <div class="dropdown-menu" v-show="activedropdown === 'resentzentlar'">
                     </div>
                 </div>
 
-                <span @click="router.push('/questions')" class="flex item-center menu_items">Bog'lanish </span>
+                <span @click="router.push('/questions')" class="flex item-center menu_items">Боғланиш </span>
             </div>
 
             <div class="flex items-center cursor-pointer header-actions">
@@ -95,8 +95,9 @@
             <div class="mobile-dropdown-wrapper">
                 <div class="mobile-menu-toggle flex justify-between items-center"
                     @click="mobileDropdownJurnal = !mobileDropdownJurnal">
-                    <span class="menu_items">Jurnal haqida</span>
-                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownJurnal }" alt="">
+                    <span class="menu_items">Журнал ҳақида</span>
+                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownJurnal }"
+                        alt="">
                 </div>
                 <div class="mobile-submenu" v-show="mobileDropdownJurnal">
                     <NuxtLink to="/ArticleGuidelines" class="dropdown-item" @click="is_Mobile_Menu_Open = false">
@@ -111,8 +112,9 @@
             <div class="mobile-dropdown-wrapper">
                 <div class="mobile-menu-toggle flex justify-between items-center"
                     @click="mobileDropdownMuallif = !mobileDropdownMuallif">
-                    <span class="menu_items">Mualliflar uchun</span>
-                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownMuallif }" alt="">
+                    <span class="menu_items">Муаллифлар учун</span>
+                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownMuallif }"
+                        alt="">
                 </div>
                 <div class="mobile-submenu" v-show="mobileDropdownMuallif">
                 </div>
@@ -121,15 +123,16 @@
             <div class="mobile-dropdown-wrapper">
                 <div class="mobile-menu-toggle flex justify-between items-center"
                     @click="mobileDropdownResentzent = !mobileDropdownResentzent">
-                    <span class="menu_items">Resentzentlar uchun</span>
-                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownResentzent }" alt="">
+                    <span class="menu_items">Рецензентлар учун</span>
+                    <img src="@/assets/icons/headers/Arrow-up.svg" :class="{ 'rotate-arrow': mobileDropdownResentzent }"
+                        alt="">
                 </div>
                 <div class="mobile-submenu" v-show="mobileDropdownResentzent">
                 </div>
             </div>
 
             <div class="mobile-menu-toggle">
-                <span class="menu_items">Bog'lanish</span>
+                <span class="menu_items">Боғланиш</span>
             </div>
         </div>
     </div>
@@ -195,6 +198,7 @@ const mobileDropdownResentzent = ref(false)
 .menu_items
     font-size: 18px
     font-family: 'SF Pro Display', sans-serif  
+    color:#364153
 
     gap: 6px
     img

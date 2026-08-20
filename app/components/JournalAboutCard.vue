@@ -60,6 +60,9 @@ const menuItems = ref<MenuItem[]>([
   @media (max-width: 768px)
     margin-left: auto
     margin-right: auto
+  @media (max-width : 630px)
+    width: 100%
+    margin-bottom: 40px
 
   &__title
     font-size: 20px

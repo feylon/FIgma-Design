@@ -57,7 +57,6 @@
 @use "../assets/sass/_variables" as variables
 
 .footer
-    margin-top: 120px
     width: 100%
     padding-top: 40px
     // padding: 40px 70px 

@@ -1,86 +1,84 @@
 <template>
-   <div class="bg-white pb-120 ">
-    <div class="about_Journal_box"></div>
-     <div class="container">
-        <div class="about_Journal">
+    <div class="bg-white pb-120 ">
+        <div class="about_Journal_box"></div>
+        <div class="container">
+            <div class="about_Journal">
 
-            <div class="flex gap-24 items-center">
-                <div class="book_card">
-                    <div class="icon_section">
-                        <img src="@/assets/icons/main/book.svg" alt="">
+                <div class="flex gap-24 items-center section_Y">
+                    <div class="book_card">
+                        <div class="icon_section">
+                            <img src="@/assets/icons/main/book.svg" alt="">
+                        </div>
+
+                        <div class="book_picture_section">
+                            <img src="@/assets/img/logo/index/book.png" alt="">
+                        </div>
+
                     </div>
+                    <span class="uzbek_iqdisoyot">
+                        Ўзбекистон иқтисодиётида рақамли трансформация жараёнларининг ўрни
+                    </span>
+                </div>
 
-                    <div class="book_picture_section">
-                        <img src="@/assets/img/logo/index/book.png" alt="">
+                <div class="button_about_Journal_section">
+                    <div class="button_about_Journal">
+                        <img src="@/assets/icons/main/downloadIcon.svg" alt="">
+                        <span>Jurnalni yuklab oling</span>
                     </div>
-
                 </div>
-                <span class="uzbek_iqdisoyot">
-                    Ўзбекистон иқтисодиётида рақамли трансформация жараёнларининг ўрни
-                </span>
+
             </div>
+            <div>
+                <div class="lastNews">
 
-            <div class="button_about_Journal_section">
-                <div class="button_about_Journal">
-                    <img src="@/assets/icons/main/downloadIcon.svg" alt="">
-                    <span>Jurnalni yuklab oling</span>
-                </div>
-            </div>
+                    <span class="last_news_title">
+                        Сўнги янгиликлар
+                    </span>
 
-        </div>
-        <div>
-            <div class="lastNews">
-
-                <span class="last_news_title">
-                    Сўнги янгиликлар
-                </span>
-
-                <span class="last_nes_description">
-                    Университет ҳақидаги сўнги воқеалардан ҳабардор бўлинг
-                </span>
+                    <span class="last_nes_description">
+                        Университет ҳақидаги сўнги воқеалардан ҳабардор бўлинг
+                    </span>
 
 
-                <div class="card_list_news">
-                    <div v-for="value in 5" class="news_card">
-                        <img class="news_card_img" src="@/assets/img/logo/index/card_news.png" alt="">
+                    <div class="card_list_news">
+                        <div v-for="value in 5" class="news_card">
+                            <img class="news_card_img" src="@/assets/img/logo/index/card_news.png" alt="">
 
-                        <div class="card_description">
-                            <span class="contenr_card">
-                                Бугун, 18-ноябрь – Ўзбекистон Республикаси Давлат байроғи қабул қилинган кун!
+                            <div class="card_description">
+                                <span class="contenr_card">
+                                    Бугун, 18-ноябрь – Ўзбекистон Республикаси Давлат байроғи қабул қилинган кун!
 
-                            </span>
+                                </span>
 
-                            <div class="card_details">
-                                <div class="time ">
-                                    <img src="@/assets/icons/main/calendar.svg" alt="">
-                                    <span>18-ноябрь, 2025</span>
-                                </div>
+                                <div class="card_details">
+                                    <div class="time ">
+                                        <img src="@/assets/icons/main/calendar.svg" alt="">
+                                        <span>18-ноябрь, 2025</span>
+                                    </div>
 
-                                <div class="views">
-                                    <img src="@/assets/icons/main/eye.svg" alt="eye.svg">
-                                    238
+                                    <div class="views">
+                                        <img src="@/assets/icons/main/eye.svg" alt="eye.svg">
+                                        238
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="button_blue_news">
+                    <button class="barcha_yangilliklarni_kurish">
+                        <span>
+                            Барча янгиликларни кўриш
+                        </span>
+                    </button>
+
+                </div>
+
+
             </div>
-
-            <div class="button_blue_news">
-                <button class="barcha_yangilliklarni_kurish">
-                    <span>
-                        Барча янгиликларни кўриш       
-                    </span>
-                </button>
-
-
-
-            </div>
-
-
         </div>
     </div>
-   </div>
 </template>
 
 
@@ -159,7 +157,7 @@
     @media (max-width :990px)
         justify-content: center
         display: flex
-        // margin-top: 40px   
+        margin-top: 40px   
     .button_about_Journal
         background:  linear-gradient(180deg, #4172C7 0%, #3861A7 100%);
         align-items: center
@@ -177,7 +175,6 @@
 .lastNews
     display: flex
     flex-direction: column
-    padding-top: 120px
     .last_news_title
         font-weight: 600;
         font-style: Semibold;
@@ -219,22 +216,23 @@
             grid-template-columns: repeat(2, 1fr)
         @media (max-width:630px)
             grid-template-columns: repeat(1, 1fr)
-            flex-direction: column
             align-items: center
+            justify-content: center
         .news_card
             width:100%
-            // padding-bottom: 12px
             top: 2180px;
             left: 210px;
             border-radius: 12px;
             angle: 0 deg;
             opacity: 1;
             background: #EBF0F6
-            @media (max-width:576px)
+            @media (max-width:630px)
                 max-width: 400px
                 display: flex
                 flex-direction: column
                 align-items: center
+                margin-left: auto
+                margin-right: auto
             .news_card_img
                 border-top-right-radius: 12px
                 border-top-left-radius: 12px
@@ -284,7 +282,13 @@
     padding-top: 120px
 
 
-
+.section_Y
+    @media (max-width: 630px)
+        display: flex
+        flex-direction: column
+        justify-content: center
+        .uzbek_iqdisoyot
+            text-align: center
 
 
 </style>

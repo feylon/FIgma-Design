@@ -83,6 +83,16 @@ const members = ref<{
                 leading-trim: NONE;
                 line-height: 140%;
                 letter-spacing: 0px;
+        @media  (max-width:780px)
+            margin-left: auto
+            margin-right: auto
+            .member_img
+                max-width: 300px
+
+
+
+
+
 
 @media  (max-width:1380px)
    .main_content
@@ -107,7 +117,7 @@ const members = ref<{
 
 .member_img
     width: 100%
-    object-fit: cover
+    object-fit: center
     border-radius: 6px
 
 </style>
