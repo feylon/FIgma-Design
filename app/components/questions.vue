@@ -1,5 +1,5 @@
     <template>
-        <div class="bg-white">
+        <div class="bg-white pt-120">
             <div class="container">
                 <div class="wrapper">
                     <form class="form-card">

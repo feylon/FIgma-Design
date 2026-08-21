@@ -3,7 +3,7 @@
         <Journal_Scope />
         <LastNews />
         <Article />
-        <indexi />
+        <InternationalIndexBases />
         <questions />
         <Sponsor />
   
