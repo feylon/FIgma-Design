@@ -118,7 +118,7 @@
     height: 198px
     angle: 0 deg
     opacity: 1
-    border-radius: 10px
+    border-radius: 1px
     border-width: 1px
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);

@@ -18,27 +18,27 @@
                     </button>
 
                     <swiper-container ref="containerRef" class="mt-60 swiper_slide_img swiper-container" :init="false">
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <img src="@/assets/img/logo/index/doi.png" alt="BASE">
                         </swiper-slide>
 
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <img src="@/assets/img/logo/index/doi.png" alt="DOI">
                         </swiper-slide>
 
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <img src="@/assets/img/logo/index/google-scholar.png" alt="Google Scholar">
                         </swiper-slide>
 
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <img src="@/assets/img/logo/index/inlibrary.png" alt="inLibrary">
                         </swiper-slide>
 
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <img src="@/assets/img/logo/index/google-scholar.png" alt="Google Scholar">
                         </swiper-slide>
 
-                        <swiper-slide>
+                        <swiper-slide class="swiper-slide">
                             <img src="@/assets/img/logo/index/inlibrary.png" alt="inLibrary">
                         </swiper-slide>
                     </swiper-container>
@@ -76,7 +76,12 @@ const swiper = useSwiper(containerRef, {
     spaceBetween: 12,
     loop: true,
     speed: 700,
-    centerInsufficientSlides: true,
+    centeredSlides: false, // loop:true bilan kerak emas, lekin pastda breakpoint darajasida boshqaramiz
+
+    // Rasm yuklangach qayta hisoblash uchun MUHIM:
+    observer: true,
+    observeParents: true,
+    updateOnWindowResize: true,
 
     autoplay: {
         delay: 3000,
@@ -86,25 +91,25 @@ const swiper = useSwiper(containerRef, {
     breakpoints: {
         0: {
             slidesPerView: 1,
+            centeredSlides: true, 
         },
-
         480: {
             slidesPerView: 1,
+            centeredSlides: true, 
         },
-
         768: {
             slidesPerView: 3,
+            centeredSlides: false,
         },
-
         1024: {
             slidesPerView: 5,
+            centeredSlides: false,
         },
     },
-})
+});
 
-const updatePagination = () => {
+const updatePagination = (e : any) => {
     const instance = swiper?.instance?.value
-
     if (!instance) {
         return
     }
@@ -160,6 +165,15 @@ onBeforeUnmount(() => {
 })
 </script>
 <style scoped lang="scss">
+:deep(.swiper-container){
+    // border: 1px red solid;
+    padding-left: 13px;
+    padding-right: 13px;
+    display: flex;
+    top: 20px;
+    // left: 13px;
+    // right: 13px;
+}
 .title_indexi {
     display: flex;
     flex-direction: column;
@@ -195,7 +209,6 @@ onBeforeUnmount(() => {
 
 .swiper-container {
     width: 100%;
-    display: flex; /* 'fle' xatosi to'g'irlandi */
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -205,7 +218,6 @@ onBeforeUnmount(() => {
     }
 
     :deep(.swiper-slide) {
-        /* display: none; o'rniga flex ishlatildi */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -214,7 +226,6 @@ onBeforeUnmount(() => {
     }
 
     :deep(.swiper-slide img) {
-        /* Qat'iy o'lchamlar o'rniga responsiv yondashuv */
         max-width: 100%;
         max-height: 100%;
         display: block;
@@ -224,7 +235,7 @@ onBeforeUnmount(() => {
 
 .slider-btn {
     position: absolute;
-    top: 40%; /* Tugmalarni vizual o'rtaga moslash */
+    top: 40%; 
     transform: translateY(-50%);
     z-index: 10;
     width: 32px;
@@ -327,8 +338,78 @@ onBeforeUnmount(() => {
     }
 }
 
-/* --- RESPONSIV QISMI --- */
+// @media (max-width: 767px) {
+//     .title_indexi {
+//         padding-top: 70px;
+//         margin-bottom: 24px;
+//         font-size: 28px;
+//         line-height: 34px;
+//     }
+
+//     .content_indexi {
+//         margin-top: 10px;
+//         padding: 0 15px;
+//         font-size: 17px;
+//         line-height: 24px;
+//     }
+
+//     .partners-slider {
+//         padding-left: 30px;
+//         padding-right: 30px;
+//         padding-bottom: 60px;
+//     }
+
+//     .slider-btn {
+//         width: 28px;
+//         height: 28px;
+//         font-size: 22px;
+//     }
+
+//     .custom-pagination {
+//         gap: 8px;
+//     }
+
+//     .pagination-bullet {
+//         width: 10px;
+//         height: 10px;
+//     }
+
+//     .pagination-bullet-active {
+//         width: 65px;
+//     }
+// }
+
+
 @media (max-width: 767px) {
+    // 1. Yon tomondagi ortiqcha bo'shliqlarni kamaytiramiz (slayder kengayadi)
+    .partners-slider {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 60px;
+    }
+
+    .swiper-container {
+        // Top va left surilishlarni mobilda nolga tenglashtiramiz
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-left: 0;
+        padding-right: 0;
+
+        // 2. Slide va Rasm o'lchamlarini oshiramiz
+        :deep(.swiper-slide) {
+            height: 200px; // Balandlikni 128px dan 200px ga oshiramiz
+        }
+
+        :deep(.swiper-slide img) {
+            width: 80%;       // Kengligini oshirish uchun
+            height: 100%;     // To'liq balandlikni egallashi uchun
+            max-height: 180px; 
+            object-fit: contain; // Rasm nisbatlari buzilmaydi
+        }
+    }
+
+    // Qolgan mavjud media uslublaringiz...
     .title_indexi {
         padding-top: 70px;
         margin-bottom: 24px;
@@ -341,12 +422,6 @@ onBeforeUnmount(() => {
         padding: 0 15px;
         font-size: 17px;
         line-height: 24px;
-    }
-
-    .partners-slider {
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 60px;
     }
 
     .slider-btn {

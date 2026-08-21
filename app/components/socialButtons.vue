@@ -93,7 +93,7 @@ onMounted(()=>{
     position: fixed
     left: -44px
     z-index: 600
-    top: 190px
+    top: 340px
     
 
 .scoial_icon
