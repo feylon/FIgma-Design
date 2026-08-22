@@ -89,20 +89,23 @@
 
 .Text_footer
     font-size: 16px
-    line-height: 1.5
-    color: white
-    overflow-wrap: anywhere
+    line-height: 24px
+    letter-spacing: 0px
+    color: #D1D5DC
+    // overflow-wrap: anywhere
     cursor: pointer
 
 .contact_item
-    display: grid
-    grid-template-columns: 20px 1fr
+    display: flex
     align-items: flex-start
     gap: 10px
 
+    span
+        white-space: nowrap
+
 .contact_item img
-    width: 20px
-    height: 20px
+    width: 18px
+    height: 18px
     margin-top: 2px
  
 .social_items
@@ -133,6 +136,7 @@
     max-width: 1440px
     margin: 0 auto
     padding-top: 20px
+    padding-bottom: 20px
     display: grid
     grid-template-columns: 1fr auto
     align-items: center

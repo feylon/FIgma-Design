@@ -203,8 +203,10 @@ onBeforeUnmount(() => {
 
 .partners-slider {
     width: 100%;
+    max-width: 1248px;
     position: relative;
     padding: 0 35px 72px;
+    margin: auto;
 }
 
 .swiper-container {

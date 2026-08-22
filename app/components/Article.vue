@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-100">
+  <div class="container mt-100 pb-100">
     <div class="mx-auto px-4 flex flex-col gap-6 ">
 
       <div class="flex flex-col gap-2">

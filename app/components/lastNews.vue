@@ -130,8 +130,17 @@ const last_News: {
 
 </script>
 <style scoped lang="sass">
-.lastNews
+.news_card_img
+    object-fit: cover
+    object-position: center
+    width: 281px;
+    height: 200px;
+    angle: 0 deg;
+    opacity: 1;
 
+
+
+    
 .about_Journal 
     margin-bottom: 120px;
     max-width: 1500px;
@@ -284,12 +293,15 @@ const last_News: {
                 border-top-right-radius: 12px
                 border-top-left-radius: 12px
                 width: 100%
+                object-fit: cover
+                object-position: center
 
             img
             .card_description
                 .contenr_card
                     font-family: 'SF Pro Display', sans-serif
                     font-weight: 500;
+                    min-height: 80.5px
                     font-style: Medium;
                     font-size: 18px;
                     leading-trim: NONE;
@@ -299,7 +311,7 @@ const last_News: {
                     padding: 12px
                     border-bottom: 1px solid #DDE0E4
                     color: #011024
-               
+                    min-height: 93px               
                
                 .card_details
                     padding: 12px 12px    

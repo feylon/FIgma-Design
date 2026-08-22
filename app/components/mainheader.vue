@@ -118,12 +118,12 @@
     height: 198px
     angle: 0 deg
     opacity: 1
-    border-radius: 1px
+    border-radius: 10px
     border-width: 1px
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(11px); 
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: 32px
     padding: 25px
@@ -136,6 +136,7 @@
     
     .whiteButton
         margin-top: 16px
+        background: white
         border: none
         border-radius: 10px
         display: flex
@@ -167,7 +168,7 @@
 
 .glass-rounded
     border-radius: 33554400px
-    background: rgba(255, 255, 255, 0.15)
+    background: rgba(255, 255, 255, 0.2)
     backdrop-filter: blur(12px)
     -webkit-backdrop-filter: blur(11px) 
     width: 230.234375px
@@ -245,6 +246,7 @@
     .card_item
         border-radius: 10px
         width: 282px
+        gap: 8px
         height: 102px
         background: rgba(255, 255, 255, 0.15)
         backdrop-filter: blur(12px)

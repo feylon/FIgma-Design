@@ -12,9 +12,6 @@
                             </span>
                         </NuxtLink>
                     </div>
-
-
-
                     <div class="flex items-center gap-6">
                         <img src="@/assets/icons/headers/phone-flip.svg" alt="1">
                         <NuxtLink to="tel:+998901234567" class="mail_section phone">
@@ -55,7 +52,6 @@
                         <div class="dropdown-menu" v-show="activedropdown === 'mualliflar'">
                         </div>
                     </div>
-
                     <div class="dropdown-wrapper" @mouseleave="activedropdown = null">
                         <span class="flex item-center menu_items" @mouseenter="activedropdown = 'resentzentlar'">
                             Рецензентлар учун <img src="@/assets/icons/headers/Arrow-up.svg" alt=""
@@ -186,6 +182,17 @@ const mobileDropdownResentzent = ref(false)
     color: white    
     font-size: 18px
     margin-right: 20px
+    span
+        // font-family: SF Pro Display;
+        font-weight: 600;
+        // font-style: Semibold;
+        font-size: 18px;
+        leading-trim: NONE;
+        line-height: 140%;
+        letter-spacing: 0px;
+        text-align: center;
+        color:white
+
 
 .contact_Button
     width: 50px

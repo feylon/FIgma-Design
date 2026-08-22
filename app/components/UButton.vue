@@ -31,7 +31,7 @@ $bg-btn-hover: #2d528e
   color: #ffffff
   padding: 12px 28px
   border-radius: 8px
-  font-size: 15px
+  font-size: 18px
   font-weight: 500
   text-decoration: none
   border: none

@@ -13,8 +13,8 @@ $secondary-500: #738fc2
 
 .floating-chat-btn
   position: fixed
-  bottom: 30px
-  right: 30px
+  bottom: 160px
+  right: 40px
   z-index: 1000
 
   width: 60px

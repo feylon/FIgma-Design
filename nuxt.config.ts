@@ -3,12 +3,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/icon', 'nuxt-swiper'],
-
+   
   css : [
     "~/assets/sass/main.sass",
     "~/assets/sass/_variables.sass",
     "~/assets/sass/fonts.sass"
-  ],    
+  ],
 
   vite: {
     css: {

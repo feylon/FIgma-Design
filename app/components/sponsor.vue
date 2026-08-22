@@ -143,8 +143,8 @@ const partners = ref<{ image: string; alt: string }[]>([
 
 
 <template>
-    <div class="bg-white">
-        <div class="container pt-110 pb-100">
+    <div class="">
+        <div class="container pt-100 pb-100">
             <div class="content px-4 sm:px-6">
                 <div class="head_sponser">
                     <span class="head_sponser_title">

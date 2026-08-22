@@ -72,9 +72,17 @@ const langItems = <{
         
     .content
         font-family: 'SF Pro Display', sans-serif
-        color: variables.$headerSotcialColor
+        color: #081E3A
         margin-right: 2px
         font-size: 17px
+        font-family: SF Pro Display;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 17px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+
 
 
 

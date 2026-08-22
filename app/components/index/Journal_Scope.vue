@@ -85,19 +85,19 @@
         line-height: 40px;
         letter-spacing: 0px;
         text-align: center;
+        color: #1E2939
     .head_section_description
         span
-            font-family: 'SF Pro Display', sans-serif;
-            font-weight: 400;
-            display: block
+            font-family: 'SF Pro Display', sans-serif
+            font-weight: 400
+            font-style: normal
+            font-size: 20px
+            line-height: 28px
+            letter-spacing: 0
+            text-align: center
             color: #4A5565
             margin-top: 12px
-            font-style: Regular;
-            font-size: 20px;
-            leading-trim: NONE;
-            line-height: 28px;
-            letter-spacing: 0px;
-            text-align: center;
+            display: block
 
 
     .card_main_section
@@ -174,11 +174,12 @@
     .card_title
         font-family: 'SF Pro Display', sans-serif;
         font-weight: 600;
-        font-style: Semibold;
+        font-style: normal;
+        text-align: left;
         font-size: 20px;
-        leading-trim: NONE;
+        leading-trim: none;
         line-height: 130%;
-        letter-spacing: 0px;
+        letter-spacing: 0;
         
     .card_content
         font-family: 'SF Pro Display', sans-serif;
