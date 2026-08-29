@@ -8,8 +8,11 @@ const apiUrl = config.public.apiUrl;
 const route = useRoute();
 const router = useRouter();
 
+
+
+console.log(route.path)
 const { data: MenuData } = useFetch<BannerSampleFormResponse>(
-  `${apiUrl}banner/${route.params.alias}`,
+ ()=> `${apiUrl}banner/${route.params.alias}`,
   {
     headers: {
       "accept-language": "uz"
@@ -57,9 +60,11 @@ useSeoMeta({
               
             </div>
 
-            <div class="menuSection">
+            <div v-if="'/contacts'  != route.path" class="menuSection">
               <div class="head">
-                <span>Журнал ҳақида</span>
+                <span>
+                  {{ MenuData?.data.parent.title }}
+                </span>
               </div>
               <div class="content">
                 <NuxtLink 

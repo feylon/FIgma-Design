@@ -14,15 +14,15 @@
 
         <div class="manages_List">
 
-            <div v-for="value in 8" class="manege_Item">
-                <img src="https://journal.tiu.uz/storage/uploads/manage/6eaf3c5be03de5f8f4da6b284c8c3742f498c029_694153b9d89916.51330901.jpg" alt="">
+            <div v-for="value in data?.data" :key="value.id" class="manege_Item">
+                <img :src="value?.files[0]?.img" alt="">
 
                 <div class="NameOfFullName">
-                    Matkarimova Gulchexra Abdusamatovna
+                        {{ value.title }}
                 </div>
 
                 <span class="contentOfManage">
-                   Huquqiy fanlar kafedrasi mudiri
+                  {{value.short_content}}
                 </span>
             </div>
 
@@ -37,6 +37,41 @@
 
 definePageMeta({
     layout : "menu"
-})
+});
+
+
+
+export interface FileItem {
+  img: string;
+  is_main: number;
+  size: number;
+  type: string;
+  url: string;
+}
+
+export interface ManagementMember {
+  id: number;
+  group: string;
+  title: string;
+  sort_order: number;
+  status: boolean;
+  short_content: string;
+  options: string;
+  files: FileItem[];
+  created_at: string;
+}
+
+export interface ManagementResponse {
+  data: ManagementMember[];
+  total: number;
+}
+
+
+
+const { data, pending, error } = await useFetch<ManagementResponse>('https://journal.tiu.uz/api/v1/main/manage?option=1&limit=12&offset=0&order=id%2Bdesc&lang=uz', {
+    headers :{
+        "accept-language" : "uz"
+    }
+});
 
 </script>
