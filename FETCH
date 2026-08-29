@@ -1,0 +1,41 @@
+[FETCH] GET -> https://journal.tiu.uz/api/v1/main/bases :Done 
+VM1148:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/main/partners : Done
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/news/list/news?limit=5&offset=0 :Done
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/posts?limit=6&offset=0 :Done
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/main/category?limit=8&offset=0 :Done
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/pages :Done
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/ :Done
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/main/stats :Done
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/main/social :Done
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/gallery :Done
+VM2054:9 🚀 Fetch So'rovi: [POST] https://journal.tiu.uz/api/v1/feedback-send :Done
+
+
+VM1148:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/polls/show
+
+
+
+
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/polls/show
+VM3111:9 🟢 [FETCH] GET -> /_i18n/xPvr92Ct/uz/messages.json
+
+
+
+VM3111:9 🟢 [FETCH] GET -> https://journal.tiu.uz/api/v1/polls/show
+
+
+
+
+{
+    "fio": "tdfvcxvdfvdfv",
+    "phone": "+998545555555",
+    "email": "vfzpfqfpdkbqsmcxom@fxavaj.com",
+    "message": "dfvdffbvfgfbfgvb",
+    "file": "[File: facebook_social.svg, 657 bytes, type: image/svg+xml]"
+}
+
+
+
+   <!-- <div class="button_see_All">
+      <span>Барча сўровномаларни кўриш</span>
+    </div> -->

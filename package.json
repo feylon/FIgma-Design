@@ -1,5 +1,5 @@
 {
-  "name": "TASK",
+  "name": "nuxt-app",
   "type": "module",
   "private": true,
   "scripts": {
@@ -10,21 +10,23 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/icon": "^2.5.0",
-    "gsap": "^3.15.0",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@pinia/nuxt": "^1.0.2",
     "maska": "^3.2.0",
     "nuxt": "^4.5.2",
+    "nuxt-svgo": "^5.3.0",
     "nuxt-swiper": "^2.0.2",
-    "scss": "^0.2.4",
+    "pinia": "^4.0.3",
+    "svg-loader": "^0.0.2",
     "swiper": "^14.1.0",
     "vue": "^3.5.41",
     "vue-router": "^5.2.0",
     "vue-the-mask": "^0.11.1"
   },
   "devDependencies": {
-    "@types/gsap": "^1.20.2",
-    "@types/vue-the-mask": "^0.11.5",
-    "nuxt-svgo": "^5.3.0",
-    "sass": "^1.102.0"
+    "@nuxt/icon": "^2.5.1",
+    "@types/node": "^26.3.0",
+    "nuxt-svg-sprite-icon": "^2.0.5",
+    "sass": "^1.103.1"
   }
 }
