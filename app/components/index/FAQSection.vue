@@ -243,7 +243,8 @@
 import { useToastStore } from '~/stores/toast'
 const toast = useToastStore();
 
-
+const config = useRuntimeConfig();
+const apiUrl = config.public.apiUrl;
 
 const form = reactive({
   fullName: '',
@@ -291,7 +292,7 @@ const submitForm = async () => {
       formData.append('file', form.file)
     }
 
-    const response = await $fetch(`https://journal.tiu.uz/api/v1/feedback-send`, {
+    const response = await $fetch(`${apiUrl}feedback-send`, {
       method: 'POST',
       body: formData,
     })
@@ -361,7 +362,7 @@ const getProgressColor = (value: number) => {
 
 
 
-const { data, refresh } = useFetch<ApiResponse>('https://journal.tiu.uz/api/v1/polls/show')
+const { data, refresh } = useFetch<ApiResponse>(`${apiUrl}polls/show`)
 const questionItems = [
     {
         key: 'result_1',
@@ -415,7 +416,7 @@ const submitSbWey = async () => {
     }
 
     try {
-        const data = await $fetch('https://journal.tiu.uz/api/v1/polls', {
+        const data = await $fetch(`${apiUrl}polls`, {
             method: 'POST',
             body: {
                 option: selectedSurvey.value

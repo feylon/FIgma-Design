@@ -39,7 +39,8 @@ definePageMeta({
     layout : "menu"
 });
 
-
+const config = useRuntimeConfig();
+const apiUrl = config.public.apiUrl;
 
 export interface FileItem {
   img: string;
@@ -68,7 +69,7 @@ export interface ManagementResponse {
 
 
 
-const { data, pending, error } = await useFetch<ManagementResponse>('https://journal.tiu.uz/api/v1/main/manage?option=1&limit=12&offset=0&order=id%2Bdesc&lang=uz', {
+const { data, pending, error } = await useFetch<ManagementResponse>(`${apiUrl}main/manage?option=1&limit=12&offset=0&order=id%2Bdesc&lang=uz`, {
     headers :{
         "accept-language" : "uz"
     }

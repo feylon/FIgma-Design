@@ -16,36 +16,41 @@
       </div>
 
       <!-- Menu Ro'yxati -->
-      <div v-else class="menuList_List">
-        <div v-for="value in menuItems" :key="value.id" class="MenuList">
-          <div class="menuItem">
-            <span>{{ value.title }}</span>
-            
-            <img
-              v-if="value.children?.length"
-              class="upDown"
-              :src="anglesmallrightsvg"
-              alt=""
-            >
+     <div v-else class="menuList_List">
+  <div v-for="value in menuItems" :key="value.id" class="MenuList">
+    <div class="menuItem">
+      
+      <!-- Ota menyu uchun link -->
+      <NuxtLink 
+        :to="value.inner_link ? `/${value.inner_link}` : `/menu/${value.alias}`"
+        style="text-decoration: none; color: inherit;"
+      >
+        <span>{{ value.title }}</span>
+      </NuxtLink>
+      
+      <img
+        v-if="value.children?.length"
+        class="upDown"
+        :src="anglesmallrightsvg"
+        alt=""
+      >
 
-            <!-- Submenu items -->
-            <div v-if="value.children?.length" class="items">
-              <NuxtLink
-              style="display: block;"
-                :to="`/menu/${item.alias}`"
-                v-for="item in value.children"
-                :key="item.id"
-                class="item"
-
-               
-              >
-                <span>{{ item.title }}</span>
-              </NuxtLink>
-            </div>
-
-          </div>
-        </div>
+      <!-- Submenu (ichki) items -->
+      <div v-if="value.children?.length" class="items">
+        <NuxtLink
+          style="display: block;"
+          v-for="item in value.children"
+          :key="item.id"
+          :to="item.inner_link ? `/${item.inner_link}` : `/menu/${item.alias}`"
+          class="item"
+        >
+          <span>{{ item.title }}</span>
+        </NuxtLink>
       </div>
+
+    </div>
+  </div>
+</div>
 
       <div class="Buttons">
         <div class="lupa">
@@ -82,5 +87,6 @@ const menuStore = useMenuStore()
 
 await useAsyncData('menu-data', () => menuStore.fetchMenu())
 
-const { menuItems, isLoading, error } = storeToRefs(menuStore)
+const { menuItems, isLoading, error } = storeToRefs(menuStore);
+console.log("Kelgan menyular", menuItems.value)
 </script>
